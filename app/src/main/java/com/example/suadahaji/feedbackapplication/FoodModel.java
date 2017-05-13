@@ -17,13 +17,18 @@ public class FoodModel extends RealmObject {
     String id;
     boolean checked = false;
     String dateChecked;
-    int count = 0;
+    String foodType = "lunch";
+    String rating ;
 
-    public FoodModel(String id, boolean checked, String dateChecked, int count) {
+    public FoodModel() {
+    }
+
+    public FoodModel(String id, boolean checked, String dateChecked, String rating, String foodType) {
         this.id = id;
         this.checked = checked;
         this.dateChecked = dateChecked;
-        this.count = count;
+        this.rating = rating;
+        this.foodType = foodType;
     }
 
     public String getId() {
@@ -43,7 +48,7 @@ public class FoodModel extends RealmObject {
     }
 
     public String getDateChecked() {
-        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+        /*SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
         Date date = null;
         SimpleDateFormat formatted = new SimpleDateFormat("yyyy");
 
@@ -53,7 +58,7 @@ public class FoodModel extends RealmObject {
             e.printStackTrace();
         }
 
-        dateChecked = formatted.format(date);
+        dateChecked = formatted.format(date);*/
         return dateChecked;
     }
 
@@ -61,11 +66,19 @@ public class FoodModel extends RealmObject {
         this.dateChecked = dateChecked;
     }
 
-    public int getCount() {
-        return count;
+    public String getRating() {
+        return rating;
     }
 
-    public void setCount(int count) {
-        this.count = count;
+    public void setRating(String rating) {
+        this.rating = rating;
+    }
+
+    public String getFoodType() {
+        return foodType;
+    }
+
+    public void setFoodType(String foodType) {
+        this.foodType = foodType;
     }
 }
