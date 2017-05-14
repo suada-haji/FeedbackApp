@@ -20,39 +20,38 @@
         <RadioButton
             android:id="@+id/good"
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
+            android:layout_height="@dimen/margin_0"
             android:layout_weight="1"
             android:checked="false"
-            android:button="@drawable/happy" />
+            android:button="@drawable/good_tab" />
         <RadioButton
             android:id="@+id/average"
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
+            android:layout_height="@dimen/margin_0"
             android:layout_weight="1"
             android:checked="false"
-            android:button="@drawable/happy"
+            android:button="@drawable/average_tab"
            />
         <RadioButton
             android:id="@+id/bad"
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
+            android:layout_height="@dimen/margin_0"
             android:layout_weight="1"
             android:checked="false"
-            android:button="@drawable/happy" />
+            android:button="@drawable/sad_tab" />
         <Button
             android:id="@+id/submitButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="@dimen/margin_20"
-            android:layout_marginLeft="@dimen/margin_45"
-            android:layout_marginRight="@dimen/margin_45"
+            android:layout_marginLeft="@dimen/margin_80"
+            android:layout_marginRight="@dimen/margin_80"
             android:background="@drawable/submit_bg"
-            android:padding="@dimen/margin_10"
+            android:padding="@dimen/margin_25"
             android:text="@string/submit"
             android:textColor="@drawable/btn_submit_color"
-            android:textSize="@dimen/text_20"
-            android:textStyle="bold" />
+            android:textSize="@dimen/text_35" />
 
     </RadioGroup>
 

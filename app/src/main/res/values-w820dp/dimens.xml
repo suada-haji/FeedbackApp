@@ -3,4 +3,22 @@
          (such as screen margins) for screens with more than 820dp of available width. This
          would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively). -->
     <dimen name="activity_horizontal_margin">64dp</dimen>
+    <dimen name="margin_100">100dp</dimen>
+    <dimen name="margin_160">160dp</dimen>
+    <dimen name="margin_20">20dp</dimen>
+    <dimen name="margin_90">90dp</dimen>
+    <dimen name="margin_40">40dp</dimen>
+    <dimen name="text_40">40sp</dimen>
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="margin_60">60dp</dimen>
+    <dimen name="text_34">34sp</dimen>
+    <dimen name="margin_50">50dp</dimen>
+    <dimen name="margin_180">180dp</dimen>
+    <dimen name="margin_25">25dp</dimen>
+    <dimen name="text_24">24sp</dimen>
+    <dimen name="margin_30">30dp</dimen>
+    <dimen name="margin_260">260dp</dimen>
+    <dimen name="margin_120">120dp</dimen>
+    <dimen name="margin_200">200dp</dimen>
+    <dimen name="text_55">55sp</dimen>
 </resources>

@@ -55,6 +55,8 @@ public class RateActivity extends AppCompatActivity {
 
         foodType = getIntent().getStringExtra(MainActivity.FOODTYPE);
 
+        getSupportActionBar().setTitle(foodType.toUpperCase() + " FEEDBACK");
+
 
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
