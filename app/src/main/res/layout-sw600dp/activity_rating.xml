@@ -8,6 +8,16 @@
     android:orientation="vertical"
     tools:context="com.example.suadahaji.feedbackapplication.RateActivity">
 
+    <TextView
+        android:id="@+id/tv_food_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/how_was_lunch"
+        android:textSize="@dimen/text_35"
+        android:textColor="@android:color/black"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_20"/>
+
     <RadioGroup
         android:id="@+id/radio_group"
         android:layout_width="match_parent"
@@ -50,7 +60,7 @@
             android:background="@drawable/submit_bg"
             android:padding="@dimen/margin_15"
             android:text="@string/submit"
-            android:textColor="@drawable/btn_submit_color"
+            android:textColor="@android:color/white"
             android:textSize="@dimen/text_30"
              />
 

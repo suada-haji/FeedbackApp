@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.suadahaji.feedbackapplication.realm.RealmController;
@@ -34,6 +35,8 @@ public class RateActivity extends AppCompatActivity {
     RadioButton rbBad;
     @BindView(R.id.submitButton)
     Button btnSubmit;
+    @BindView(R.id.tv_food_type)
+    TextView tvFoodType;
 
     Realm realm;
 
@@ -57,6 +60,8 @@ public class RateActivity extends AppCompatActivity {
 
         getSupportActionBar().setTitle(foodType.toUpperCase() + " FEEDBACK");
 
+        tvFoodType.setText("How was " + foodType + "?");
+
 
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,9 +73,7 @@ public class RateActivity extends AppCompatActivity {
                 } else if (rbBad.isChecked()) {
                     rating = "bad";
                 }
-
                 insertFeedback();
-
             }
         });
 
