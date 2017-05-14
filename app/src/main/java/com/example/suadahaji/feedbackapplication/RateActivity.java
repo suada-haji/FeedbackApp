@@ -1,8 +1,10 @@
 package com.example.suadahaji.feedbackapplication;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -35,7 +37,8 @@ public class RateActivity extends AppCompatActivity {
 
     Realm realm;
 
-    String getText;
+    String rating;
+    String foodType;
 
 
     @Override
@@ -45,17 +48,23 @@ public class RateActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
         realm = RealmController.with(this).getRealm();
+
+        foodType = getIntent().getStringExtra(MainActivity.FOODTYPE);
+
 
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (rbGood.isChecked()) {
-                    getText = "good";
+                    rating = "good";
                 } else if (rbAverage.isChecked()) {
-                    getText = "average";
+                    rating = "average";
                 } else if (rbBad.isChecked()) {
-                    getText = "bad";
+                    rating = "bad";
                 }
 
                 insertFeedback();
@@ -78,11 +87,13 @@ public class RateActivity extends AppCompatActivity {
             public void execute(Realm realm) {
                 FoodModel model = realm.createObject(FoodModel.class, id);
                 model.setDateChecked(dateStr);
-                model.setRating(getText);
+                model.setRating(rating);
+                model.setFoodType(foodType);
             }
         }, new Realm.Transaction.OnSuccess() {
             @Override
             public void onSuccess() {
+                Log.d("Suada", "Model : " + RealmController.getInstance().getBadFeedback());
                showDialog();
             }
         }, new Realm.Transaction.OnError() {
@@ -107,5 +118,17 @@ public class RateActivity extends AppCompatActivity {
             }
         });
         dialog.show();
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
+
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 }
