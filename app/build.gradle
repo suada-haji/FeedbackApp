@@ -29,7 +29,12 @@ dependencies {
     compile "com.android.support:design:25.3.1"
     testCompile 'junit:junit:4.12'
 
+    // Firebase Database
+    compile 'com.google.firebase:firebase-database:10.2.4'
+
+    // Butterknife
     compile 'com.jakewharton:butterknife:8.5.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
-
 }
+
+apply plugin: 'com.google.gms.google-services'
