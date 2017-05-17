@@ -21,7 +21,7 @@
         android:id="@+id/radio_group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
         android:orientation="horizontal"
         android:weightSum="3"
         android:layout_marginTop="@dimen/margin_90">
@@ -50,21 +50,5 @@
             android:button="@drawable/sad_600_tab"
             android:checked="false" />
     </RadioGroup>
-
-    <Button
-        android:id="@+id/submitButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/margin_10"
-        android:layout_marginLeft="@dimen/margin_160"
-        android:layout_marginRight="@dimen/margin_160"
-        android:background="@drawable/bg_button"
-        android:padding="@dimen/margin_25"
-        android:text="@string/submit"
-        android:gravity="center_horizontal"
-        android:textColor="@android:color/white"
-        android:textSize="@dimen/text_30"
-        android:layout_below="@id/radio_group"
-        android:layout_marginTop="@dimen/margin_20"/>
 
 </RelativeLayout>

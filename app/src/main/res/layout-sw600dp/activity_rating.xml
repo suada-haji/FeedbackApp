@@ -49,20 +49,6 @@
             android:layout_weight="1"
             android:checked="false"
             android:button="@drawable/sad_600_tab" />
-        <Button
-            android:id="@+id/submitButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="@dimen/margin_20"
-            android:layout_marginLeft="@dimen/margin_60"
-            android:layout_marginRight="@dimen/margin_60"
-            android:background="@drawable/bg_button"
-            android:padding="@dimen/margin_15"
-            android:text="@string/submit"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/text_30"
-             />
 
     </RadioGroup>
 
