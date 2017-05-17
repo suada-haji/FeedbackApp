@@ -22,10 +22,12 @@
         android:id="@+id/radio_group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
         android:orientation="horizontal"
         android:weightSum="3"
-        android:layout_marginTop="@dimen/margin_120">
+        android:layout_marginTop="@dimen/margin_120"
+        android:layout_marginRight="@dimen/margin_20"
+        android:layout_marginLeft="@dimen/margin_20">
 
         <RadioButton
             android:id="@+id/good"
@@ -47,24 +49,7 @@
             android:id="@+id/bad"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:button="@drawable/good_tab"
+            android:button="@drawable/sad_tab"
             android:checked="false" />
     </RadioGroup>
-
-    <Button
-        android:id="@+id/submitButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/margin_30"
-        android:layout_marginLeft="@dimen/margin_200"
-        android:layout_marginRight="@dimen/margin_180"
-        android:background="@drawable/bg_button"
-        android:padding="@dimen/margin_40"
-        android:text="@string/submit"
-        android:gravity="center_horizontal"
-        android:textColor="@android:color/white"
-        android:textSize="@dimen/text_55"
-        android:layout_below="@id/radio_group"
-        android:layout_marginTop="@dimen/margin_90" />
-
 </RelativeLayout>

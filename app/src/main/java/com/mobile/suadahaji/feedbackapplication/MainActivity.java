@@ -47,8 +47,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Intent intent = new Intent(this, RateActivity.class);
         intent.putExtra(FOODTYPE, foodType);
         startActivity(intent);
+        finish();
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
 }
 
 
