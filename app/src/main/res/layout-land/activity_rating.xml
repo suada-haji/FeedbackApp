@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_land"
+    android:orientation="vertical"
+    tools:context="com.mobile.suadahaji.feedbackapplication.RateActivity">
+
+    <TextView
+        android:id="@+id/tv_food_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/how_was_lunch"
+        android:textSize="@dimen/text_25"
+        android:textColor="@android:color/black"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_20"/>
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_marginTop="@dimen/margin_50">
+
+        <RadioButton
+            android:id="@+id/good"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/happy"
+            android:layout_marginRight="@dimen/margin_80"
+            android:checked="false" />
+
+        <RadioButton
+            android:id="@+id/average"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/average"
+            android:checked="false"
+            android:layout_marginRight="@dimen/margin_80"/>
+
+        <RadioButton
+            android:id="@+id/bad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/sad"
+            android:checked="false" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_20"
+        android:layout_marginLeft="@dimen/margin_90"
+        android:layout_marginRight="@dimen/margin_90"
+        android:background="@drawable/bg_button"
+        android:padding="@dimen/margin_20"
+        android:text="@string/submit"
+        android:gravity="center_horizontal"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_20"
+        android:layout_below="@id/radio_group"
+        android:layout_marginTop="40dp"/>
+
+</RelativeLayout>
