@@ -1,4 +1,4 @@
-package com.example.suadahaji.feedbackapplication;
+package com.mobile.suadahaji.feedbackapplication;
 
 
 import android.app.Application;

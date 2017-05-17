@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/background"
     android:orientation="vertical"
-    tools:context="com.example.suadahaji.feedbackapplication.RateActivity">
+    tools:context="com.mobile.suadahaji.feedbackapplication.RateActivity">
     <TextView
         android:id="@+id/tv_food_type"
         android:layout_width="match_parent"
@@ -40,7 +40,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:checked="false"
-            android:button="@drawable/happy"
+            android:button="@drawable/average"
            />
         <RadioButton
             android:id="@+id/bad"
@@ -48,7 +48,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:checked="false"
-            android:button="@drawable/happy" />
+            android:button="@drawable/sad" />
         <Button
             android:id="@+id/submitButton"
             android:layout_width="match_parent"
@@ -57,7 +57,7 @@
             android:layout_marginBottom="@dimen/margin_20"
             android:layout_marginLeft="@dimen/margin_45"
             android:layout_marginRight="@dimen/margin_45"
-            android:background="@drawable/submit_bg"
+            android:background="@drawable/bg_button"
             android:padding="@dimen/margin_10"
             android:text="@string/submit"
             android:textColor="@android:color/white"
@@ -65,7 +65,4 @@
             android:textStyle="bold" />
 
     </RadioGroup>
-
-
-
 </LinearLayout>

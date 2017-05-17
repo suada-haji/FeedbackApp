@@ -1,7 +1,6 @@
-package com.example.suadahaji.feedbackapplication;
+package com.mobile.suadahaji.feedbackapplication;
 
 import android.app.Dialog;
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -13,7 +12,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.suadahaji.feedbackapplication.realm.RealmController;
+import com.mobile.suadahaji.feedbackapplication.realm.RealmController;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -25,17 +24,17 @@ import io.realm.Realm;
 
 public class RateActivity extends AppCompatActivity {
 
-    @BindView(R.id.radio_group)
+    @BindView(com.mobile.suadahaji.feedbackapplication.R.id.radio_group)
     RadioGroup radioGroup;
-    @BindView(R.id.good)
+    @BindView(com.mobile.suadahaji.feedbackapplication.R.id.good)
     RadioButton rbGood;
-    @BindView(R.id.average)
+    @BindView(com.mobile.suadahaji.feedbackapplication.R.id.average)
     RadioButton rbAverage;
-    @BindView(R.id.bad)
+    @BindView(com.mobile.suadahaji.feedbackapplication.R.id.bad)
     RadioButton rbBad;
-    @BindView(R.id.submitButton)
+    @BindView(com.mobile.suadahaji.feedbackapplication.R.id.submitButton)
     Button btnSubmit;
-    @BindView(R.id.tv_food_type)
+    @BindView(com.mobile.suadahaji.feedbackapplication.R.id.tv_food_type)
     TextView tvFoodType;
 
     Realm realm;
@@ -47,7 +46,7 @@ public class RateActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rating);
+        setContentView(com.mobile.suadahaji.feedbackapplication.R.layout.activity_rating);
 
         ButterKnife.bind(this);
 
@@ -61,6 +60,19 @@ public class RateActivity extends AppCompatActivity {
         getSupportActionBar().setTitle(foodType.toUpperCase() + " FEEDBACK");
 
         tvFoodType.setText("How was " + foodType + "?");
+
+        btnSubmit.setEnabled(false);
+
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if (checkedId == 0) {
+                    btnSubmit.setEnabled(false);
+                } else {
+                    btnSubmit.setEnabled(true);
+                }
+            }
+        });
 
 
         btnSubmit.setOnClickListener(new View.OnClickListener() {
@@ -111,15 +123,16 @@ public class RateActivity extends AppCompatActivity {
 
     public void showDialog() {
         LayoutInflater inflater = getLayoutInflater();
-        View dialoglayout = inflater.inflate(R.layout.alert_view, null);
+        View dialoglayout = inflater.inflate(com.mobile.suadahaji.feedbackapplication.R.layout.alert_view, null);
         final Dialog dialog = new Dialog(this);
         dialog.setContentView(dialoglayout);
 
-        Button btnOk = (Button) dialoglayout.findViewById(R.id.btn_ok);
+        Button btnOk = (Button) dialoglayout.findViewById(com.mobile.suadahaji.feedbackapplication.R.id.btn_ok);
         btnOk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 dialog.dismiss();
+                btnSubmit.setEnabled(false);
             }
         });
         dialog.show();

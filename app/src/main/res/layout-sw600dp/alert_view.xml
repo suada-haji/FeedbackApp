@@ -41,7 +41,7 @@
             android:layout_marginBottom="@dimen/margin_20"
             android:text="OK"
             android:fontFamily="sans-serif-medium"
-            android:background="@drawable/submit_bg"
+            android:background="@drawable/bg_button_enabled"
             android:textColor="@android:color/white"
             android:textSize="30sp"
             android:padding="@dimen/margin_20"/>

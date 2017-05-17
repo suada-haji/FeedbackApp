@@ -1,8 +1,4 @@
-package com.example.suadahaji.feedbackapplication;
-
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+package com.mobile.suadahaji.feedbackapplication;
 
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;

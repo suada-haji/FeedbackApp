@@ -1,10 +1,10 @@
-package com.example.suadahaji.feedbackapplication.realm;
+package com.mobile.suadahaji.feedbackapplication.realm;
 
 import android.app.Activity;
 import android.app.Application;
 import android.support.v4.app.Fragment;
 
-import com.example.suadahaji.feedbackapplication.FoodModel;
+import com.mobile.suadahaji.feedbackapplication.FoodModel;
 
 import io.realm.Realm;
 import io.realm.RealmResults;

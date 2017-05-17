@@ -1,4 +1,4 @@
-package com.example.suadahaji.feedbackapplication;
+package com.mobile.suadahaji.feedbackapplication;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -13,15 +13,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public static final String FOODTYPE = "foodType";
 
-    @BindView(R.id.btn_breakfast)
+    @BindView(com.mobile.suadahaji.feedbackapplication.R.id.btn_breakfast)
     Button btnBreakfast;
-    @BindView(R.id.btn_lunch)
+    @BindView(com.mobile.suadahaji.feedbackapplication.R.id.btn_lunch)
     Button btnLunch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(com.mobile.suadahaji.feedbackapplication.R.layout.activity_main);
 
         ButterKnife.bind(this);
 
@@ -32,10 +32,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.btn_breakfast:
+            case com.mobile.suadahaji.feedbackapplication.R.id.btn_breakfast:
                 submitReview("breakfast");
                 break;
-            case R.id.btn_lunch:
+            case com.mobile.suadahaji.feedbackapplication.R.id.btn_lunch:
                 submitReview("lunch");
                 break;
             default:

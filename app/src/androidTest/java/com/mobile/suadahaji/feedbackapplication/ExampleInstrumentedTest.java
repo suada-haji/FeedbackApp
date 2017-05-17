@@ -1,4 +1,4 @@
-package com.example.suadahaji.feedbackapplication;
+package com.mobile.suadahaji.feedbackapplication;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.suadahaji.feedbackapplication", appContext.getPackageName());
+        assertEquals("com.mobile.suadahaji.feedbackapplication", appContext.getPackageName());
     }
 }
